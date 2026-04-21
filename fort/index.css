@@ -1,0 +1,111 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: black;
+}
+
+.logo {
+    background: #a31d1d;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 10%;
+    background: linear-gradient(135deg, #a31d1d 30%, #000 30%); /* Creates the split effect */
+}
+
+.hero-container, .intro-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.image-box img {
+    width: 350px;
+    border: 8px solid white;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-btns {
+    margin-top: 30px;
+}
+
+.btn-white {
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.btn-outline {
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: 2px solid #a31d1d;
+    background: transparent;
+    color: #a31d1d;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Intro Section */
+.intro {
+    padding: 100px 10%;
+    background: linear-gradient(225deg, #fff 30%, #a31d1d 30%);
+    color: white;
+}
+
+/* Reverse layout for intro if needed */
+.intro-container {
+    flex-direction: row;
+}
+
+.intro-content h2 {
+    font-size: 3rem;
+}
+
+.intro-content h3 {
+    margin-top: 20px;
+    color: #fff;
+}
