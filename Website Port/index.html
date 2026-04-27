@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAX</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <a href="#home" class="logo">DAX</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#introduction">ABOUT ME</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contacts">CONTACTS</a></li>
+        </ul>
+        <div class="nav-right">
+            <div class="nav-icons" role="button" tabindex="0" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="nav-menu" class="nav-menu" aria-label="Navigation menu">
+                <a href="#home">Home</a>
+                <a href="#introduction">About Me</a>
+                <a href="#projects">Projects</a>
+                <a href="#contacts">Contacts</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="splash-area">
+    <section id="home" class="hero">
+        <div class="hero-image hero-frame">
+            <img src="assets/daxen pic.jpg" alt="Daxen G. Artiaga">
+        </div>
+        <div class="hero-content">
+            <p class="intro">Hello my name is...</p>
+            <h1>ARTIAGA, DAXEN G.</h1>
+            <p class="description">
+                I am a developer passionate about creating clean, responsive, and easy-to-use web applications.
+                I combine front-end design and back-end functionality to build digital solutions that are smooth,
+                reliable, and built to grow over time.
+            </p>
+            <div class="hero-actions">
+                <a href="#contacts" class="btn btn-primary">Contact Me!</a>
+                <a href="#introduction" class="btn btn-secondary">About Me!</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="introduction" class="about intro">
+        <h2>INTRODUCTION</h2>
+        <div class="about-grid">
+            <div class="about-copy">
+                <h3>ABOUT ME</h3>
+                <p>Currently studying in the College of Engineering Technology, with a focus on software and hardware-related fields. Academic experiences have helped build knowledge in programming, computer troubleshooting, system operations, and computer components. There is a strong interest in learning how software and hardware work together to create efficient and reliable computer systems.</p>
+                <h3>SKILLS</h3>
+                <p>Skills include basic programming, computer troubleshooting, hardware installation, software setup, and understanding of computer systems. Along with technical skills, there are also strengths in critical thinking, problem-solving, teamwork, and communication. These skills continue to improve and support future growth in software and hardware technology.</p>
+            </div>
+            <div class="about-image about-frame">
+                <img src="assets/daxen pic.jpg" alt="Daxen G. Artiaga">
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <section id="projects" class="projects">
+        <h2>PROJECTS</h2>
+        <div class="project-carousel-container">
+            <button class="carousel-button prev" aria-label="Previous project">‹</button>
+            <div class="project-carousel">
+                <div class="project-card project-image-1">
+                    <div class="project-card-content">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>Designed and built a responsive portfolio using HTML and CSS to showcase skills, experience, and contact information.</p>
+                    </div>
+                </div>
+                <div class="project-card project-image-2">
+                    <div class="project-card-content">
+                        <h3>Academic System Build</h3>
+                        <p>Assembled a computer from components, installed the operating system, and verified hardware compatibility and performance.</p>
+                    </div>
+                </div>
+                <div class="project-card project-image-3">
+                    <div class="project-card-content">
+                        <h3>Technical Support Workflow</h3>
+                        <p>Developed documentation and process recommendations for troubleshooting hardware and software issues in a lab environment.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button next" aria-label="Next project">›</button>
+        </div>
+        <div class="project-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <footer id="contacts" class="contacts-section">
+        <h2>CONTACTS</h2>
+        <div class="contacts-grid">
+            <div class="contact-card">
+                <div class="contact-icon">💬</div>
+                <div>
+                    <p class="contact-text">0915-103-3255</p>
+                    <p class="contact-subtext">Phone</p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <p class="contact-text">daxenartiaga143@gmail.com</p>
+                    <p class="contact-subtext">Email</p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon"></div>
+                <div>
+                    <p class="contact-text">Daxen Artiaga</p>
+                    <p class="contact-subtext">Facebook</p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">📷</div>
+                <div>
+                    <p class="contact-text">@ovo_vex</p>
+                    <p class="contact-subtext">Instagram</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <span>Designed & developed by Dax Corp</span>
+            <span>Copyright © 2022 Dax Corp. Registered in Sweden & Switzerland</span>
+        </div>
+    </footer>
+
+    <script>
+        const carousel = document.querySelector('.project-carousel');
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const nextButton = document.querySelector('.carousel-button.next');
+        const dots = document.querySelectorAll('.dot');
+        const cards = Array.from(document.querySelectorAll('.project-card'));
+        const sections = Array.from(document.querySelectorAll('section[id]'));
+        const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
+        const navToggle = document.querySelector('.nav-icons');
+        const navMenu = document.querySelector('.nav-menu');
+        let currentIndex = 0;
+
+        function updateDots(index) {
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        function scrollToIndex(index) {
+            const card = cards[0];
+            if (!card) return;
+            const gap = 24;
+            const cardWidth = card.offsetWidth + gap;
+            currentIndex = Math.max(0, Math.min(index, cards.length - 1));
+            carousel.scrollTo({ left: currentIndex * cardWidth, behavior: 'smooth' });
+            updateDots(currentIndex);
+        }
+
+        prevButton.addEventListener('click', () => scrollToIndex(currentIndex - 1));
+        nextButton.addEventListener('click', () => scrollToIndex(currentIndex + 1));
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => scrollToIndex(index));
+        });
+
+        carousel.addEventListener('scroll', () => {
+            const card = cards[0];
+            if (!card) return;
+            const gap = 24;
+            const cardWidth = card.offsetWidth + gap;
+            const index = Math.round(carousel.scrollLeft / cardWidth);
+            if (index !== currentIndex) {
+                currentIndex = index;
+                updateDots(currentIndex);
+            }
+        });
+
+        function updateNavActive() {
+            const scrollPosition = window.scrollY + 120;
+            sections.forEach(section => {
+                const top = section.offsetTop;
+                const height = section.offsetHeight;
+                const id = section.getAttribute('id');
+                const link = navLinks.find(item => item.getAttribute('href') === `#${id}`);
+                if (!link) return;
+                if (scrollPosition >= top && scrollPosition < top + height) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        navToggle.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                const isOpen = navMenu.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', isOpen);
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!navMenu.contains(event.target) && !navToggle.contains(event.target)) {
+                navMenu.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        window.addEventListener('scroll', updateNavActive);
+        window.addEventListener('load', updateNavActive);
+    </script>
+</body>
+</html>
